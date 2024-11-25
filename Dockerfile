@@ -12,7 +12,7 @@ COPY requirements.lock requirements-dev.lock ./
 ENV UV_HTTP_TIMEOUT=300
 ENV UV_INSTALL_DIR=/root/.local/bin
 
-RUN uv pip install --no-cache --system -r requirements.lock
+RUN uv pip install --system -r requirements.lock
 
 WORKDIR /code
 COPY . /code/
