@@ -1,4 +1,3 @@
-# Stage 1: Build Stage
 FROM python:3.12.7-bookworm AS build
 
 ARG ENVIRONMENT
