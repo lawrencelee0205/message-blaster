@@ -51,3 +51,6 @@ docker-compose.override.yml
 # Rye
 .python-version
 .rye/
+
+# Telegram
+*.session*

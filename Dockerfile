@@ -1,4 +1,3 @@
-# Stage 1: Build Stage
 FROM python:3.12.7-bookworm AS build
 
 ARG ENVIRONMENT
@@ -12,7 +11,7 @@ COPY requirements.lock requirements-dev.lock ./
 ENV UV_HTTP_TIMEOUT=300
 ENV UV_INSTALL_DIR=/root/.local/bin
 
-RUN uv pip install --no-cache --system -r requirements.lock
+RUN uv pip install --system -r requirements.lock
 
 WORKDIR /code
 COPY . /code/
